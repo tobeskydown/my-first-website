@@ -3,66 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的作品與遊戲網站</title>
-    <meta name="description" content="展示我的小遊戲、學校作品與畫畫作品的個人網站。">
-    <!-- Google Search Console 驗證碼 -->
+    <title>我的專業作品集網站</title>
+    <meta name="description" content="展示我的小遊戲、學校作品、畫畫作品與影片的專業作品集網站。">
     <meta name="google-site-verification" content="Grfn8PjSPmlPe_tpH0fAAlJ0rdD5_MM_VAHRrxGzYa4" />
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
-        header, footer { background-color: #f0f0f0; text-align: center; padding: 20px; }
-        main { padding: 20px; }
-        section { margin-bottom: 40px; }
-        h2 { color: #333; margin-bottom: 10px; }
-        ul { list-style: none; padding: 0; }
-        li { margin-bottom: 10px; }
-        a { text-decoration: none; color: #0077cc; }
+        /* 全域樣式 */
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; padding: 0; background-color: #f5f7fa; color: #333; }
+        a { text-decoration: none; color: #0066cc; }
         a:hover { text-decoration: underline; }
+
+        /* 頂部 Header */
+        header { background-color: #1a202c; color: white; padding: 20px 0; text-align: center; }
+        header h1 { margin: 0; font-size: 2.2em; }
+        header p { margin: 5px 0 0 0; font-size: 1em; }
+
+        /* 導航列 */
+        nav { display: flex; justify-content: center; gap: 30px; background-color: #2d3748; padding: 10px 0; }
+        nav a { color: white; font-weight: bold; }
+        nav a:hover { color: #63b3ed; }
+
+        /* 主要內容 */
+        main { padding: 40px 20px; max-width: 1000px; margin: auto; }
+
+        section { margin-bottom: 50px; }
+        section h2 { border-left: 5px solid #3182ce; padding-left: 10px; margin-bottom: 20px; }
+
+        /* 卡片樣式 */
+        .card-container { display: flex; flex-wrap: wrap; gap: 20px; }
+        .card { background-color: white; border-radius: 10px; padding: 20px; flex: 1 1 300px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.2s; }
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { margin-top: 0; color: #1a202c; }
+        .card p { margin-bottom: 0; }
+
+        /* 影片區塊 */
+        iframe, video { width: 100%; height: 360px; border-radius: 10px; margin-top: 10px; }
+
+        /* Footer */
+        footer { background-color: #1a202c; color: white; text-align: center; padding: 20px 0; }
     </style>
 </head>
 <body>
-    <header>
-        <h1>🎨 我的個人網站</h1>
-        <p>隨意架設的網站，用來展示我的作品與小遊戲</p>
-    </header>
 
-    <main>
-        <!-- 網站介紹 -->
-        <section>
-            <h2>網站介紹</h2>
-            <p>這個網站是我隨意架設的，用來放一些我自己做的小遊戲、學校作品，以及畫畫作品，讓大家看看我的創作。</p>
-        </section>
+<header>
+    <h1>🎨 我的專業作品集</h1>
+    <p>展示我的小遊戲、學校作品、畫畫作品與示範影片</p>
+</header>
 
-        <!-- 小遊戲連結 -->
-        <section>
-            <h2>小遊戲連結</h2>
-            <ul>
-                <li><a href="games/game1.html">小遊戲 1</a></li>
-                <li><a href="games/game2.html">小遊戲 2</a></li>
-            </ul>
-        </section>
+<nav>
+    <a href="#about">網站介紹</a>
+    <a href="#games">小遊戲</a>
+    <a href="#school">學校作品</a>
+    <a href="#art">畫畫作品</a>
+    <a href="#video">影片展示</a>
+</nav>
 
-        <!-- 學校作品 -->
-        <section>
-            <h2>學校作品</h2>
-            <ul>
-                <li>智慧碳足跡追蹤系統專題</li>
-                <li>魚鉤自動化機構設計專題</li>
-                <li>國道車流分析專題</li>
-            </ul>
-        </section>
+<main>
+    <!-- 網站介紹 -->
+    <section id="about">
+        <h2>網站介紹</h2>
+        <p>這個網站是我隨意架設的專業作品集，用來展示我的小遊戲、學校專題、畫畫作品，以及作品示範影片。訪客可以透過文字連結快速瀏覽各個作品。</p>
+    </section>
 
-        <!-- 畫畫作品 -->
-        <section>
-            <h2>畫畫作品</h2>
-            <ul>
-                <li>作品 1</li>
-                <li>作品 2</li>
-            </ul>
-        </section>
-    </main>
+    <!-- 小遊戲連結 -->
+    <section id="games">
+        <h2>小遊戲連結</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3><a href="games/game1.html">小遊戲 1</a></h3>
+                <p>簡單的互動遊戲，訓練反應與邏輯思維。</p>
+            </div>
+            <div class="card">
+                <h3><a href="games/game2.html">小遊戲 2</a></h3>
+                <p>小型解謎遊戲，挑戰你的創意思維。</p>
+            </div>
+        </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2026 我的個人網站</p>
-    </footer>
+    <!-- 學校作品 -->
+    <section id="school">
+        <h2>學校作品</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>智慧碳足跡追蹤系統</h3>
+                <p>基於物聯網技術，實時監測空氣品質與碳排放，並預測環境變化。</p>
+            </div>
+            <div class="card">
+                <h3>魚鉤自動化機構設計</h3>
+                <p>自動化裝置設計，提升釣魚效率，展現機械控制概念。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 畫畫作品 -->
+    <section id="art">
+        <h2>畫畫作品</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>作品 1</h3>
+                <p>水彩創作，描繪自然風景。</p>
+            </div>
+            <div class="card">
+                <h3>作品 2</h3>
+                <p>手繪插畫，結合想像與故事情節。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 影片展示 -->
+    <section id="video">
+        <h2>作品示範影片</h2>
+        <p>以下影片展示小遊戲玩法與畫畫創作過程：</p>
+
+        <!-- YouTube 嵌入示範 -->
+        <iframe 
+            src="https://www.youtube.com/embed/你的影片ID" 
+            title="作品示範影片" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 我的專業作品集網站</p>
+</footer>
+
 </body>
 </html>
